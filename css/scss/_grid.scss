@@ -1,0 +1,108 @@
+//variaveis do grid
+$cols: 12;
+$gutter: 20px;
+$l-device: 1200;
+$m-device: 760;
+$s-device: 480;
+
+// box-sizing
+*, *::after, *::before {
+  box-sizing: border-box;
+}
+
+// mixin media-querie
+@mixin d($size) {
+  @if $size == l {
+    @media screen and (min-width: #{$l-device + px}) {
+      @content;
+    }
+  }
+  @else if $size == m {
+    @media screen and (min-width: #{$m-device + px} ) and (max-width: #{$l-device - 1 + px}) {
+      @content;
+    }
+  }
+  @else if $size == s {
+    @media screen and (max-width: #{$m-device - 1 + px}) {
+      @content;
+    }
+  }
+}
+
+// função grid
+@function grid($col, $offset: false) {
+  $width: $col / $cols * 100 + "%";
+  $result: calc(#{$width} - #{$gutter});
+  @if $offset == offset {
+    $gutter: $gutter / 2;
+    $result: calc(#{$width} + #{$gutter});
+  }
+  @return $result;
+}
+
+// classes grid
+@for $i from 1 through $cols {
+  .grid-#{$i} {
+    width: grid($i);
+  }
+}
+
+// mixin estrutura
+@mixin grid-structure {
+  float: left;
+  min-height: 1px;
+  margin-left: $gutter / 2;
+  margin-right: $gutter / 2;
+  @include d(s) {
+    width: 100%;
+    float: none;
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+}
+
+[class^="grid-"] {
+  @include grid-structure;
+}
+
+// classes offset
+@for $i from 1 through $cols {
+  .offset-#{$i} {
+    margin-left: grid($i, offset);
+    @extend %offset;
+  }
+}
+
+@include d(s) {
+  %offset {
+    margin-left: 0px;
+  }
+}
+
+//mixin clearfix
+@mixin clearfix {
+  &::after, &::before {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}
+
+@mixin container {
+  max-width: $l-device;
+  margin: 0px auto;
+  position: relative;
+  @include d(m) {
+    max-width: $m-device;
+  }
+  @include d(s) {
+    max-width: $s-device;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  @include clearfix;
+}
+
+.container {
+  @include container;
+}
