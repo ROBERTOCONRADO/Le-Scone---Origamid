@@ -341,5 +341,147 @@ p {
 }
 
 .intro-foto {
-  border: 10px solid;
+  border: 10px solid #cbc6b9;
+}
+
+.menu {
+  margin-top: 120px;
+  margin-bottom: 120px;
+}
+
+@media screen and (max-width: 759px) {
+  .menu {
+    margin-top: 60px;
+    margin-bottom: 60px;
+  }
+}
+
+.menu-item {
+  margin-bottom: 60px;
+}
+
+.menu-item h2 {
+  font-family: "Cabin", sans-serif;
+  font-size: 1.5em;
+  line-height: 1.25em;
+  margin-bottom: 1em;
+}
+
+.menu-item li {
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 1.125em;
+  line-height: 1.66667em;
+  line-height: 1.94444em;
+}
+
+.menu-item li span {
+  font-family: "Cabin", sans-serif;
+  color: #988c77;
+  display: inline-block;
+  width: 70px;
+  text-align: right;
+  margin-right: 10px;
+  margin-left: -80px;
+}
+
+@media screen and (max-width: 759px) {
+  .menu-item li span {
+    margin-left: 0px;
+    width: auto;
+  }
+}
+
+.menu-item img {
+  border-radius: 50%;
+  border: 10px solid #cbc6b9;
+  position: absolute;
+  right: 0px;
+  margin-top: 20px;
+}
+
+@media screen and (min-width: 1200px) {
+  .menu-item img {
+    right: 150px;
+  }
+}
+
+@media screen and (min-width: 760px) and (max-width: 1199px) {
+  .menu-item img {
+    width: 200px;
+    right: 50px;
+    margin-top: 20px;
+  }
+}
+
+@media screen and (max-width: 759px) {
+  .menu-item img {
+    width: 140px;
+    right: 10px;
+    margin-top: 60px;
+  }
+}
+
+.contato {
+  margin-top: 120px;
+  margin-bottom: 120px;
+}
+
+@media screen and (max-width: 759px) {
+  .contato {
+    margin-top: 60px;
+    margin-bottom: 60px;
+  }
+}
+
+.contato form label {
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 1.125em;
+  line-height: 1.66667em;
+  display: block;
+}
+
+.contato form input[type="text"], .contato form textarea {
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 1.125em;
+  line-height: 1.66667em;
+  color: #2a2426;
+  width: 100%;
+  padding: 0 5px;
+  height: 40px;
+  background: transparent;
+  margin-bottom: 1em;
+  border: 2px solid #988c77;
+}
+
+.contato form input[type="text"]:hover, .contato form input[type="text"]:focus, .contato form textarea:hover, .contato form textarea:focus {
+  outline: none;
+  border-color: #cbc6b9;
+}
+
+.contato form textarea {
+  height: 120px;
+}
+
+input.button {
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 1.125em;
+  line-height: 1.66667em;
+  cursor: pointer;
+  color: #988c77;
+  text-transform: uppercase;
+  border: 2px solid #988c77;
+  background: transparent;
+  display: block;
+  width: 200px;
+  padding-top: 5px;
+  -webkit-box-shadow: 5px 5px 0 -2px #cbc6b9, 5px 5px 0 0 #988c77;
+  -moz-box-shadow: 5px 5px 0 -2px #cbc6b9, 5px 5px 0 0 #988c77;
+  box-shadow: 5px 5px 0 -2px #cbc6b9, 5px 5px 0 0 #988c77;
+}
+
+input.button:hover {
+  margin-left: 5px;
+  margin-top: 5px;
+  box-shadow: none;
+  transition: 0.3s ease-in-out;
 }
