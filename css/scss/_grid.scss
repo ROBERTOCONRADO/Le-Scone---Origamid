@@ -89,14 +89,14 @@ $s-device: 480;
 }
 
 @mixin container {
-  max-width: $l-device;
+  max-width: $l-device + px;
   margin: 0px auto;
   position: relative;
   @include d(m) {
-    max-width: $m-device;
+    max-width: $m-device + px;
   }
   @include d(s) {
-    max-width: $s-device;
+    max-width: $s-device + px;
     padding: 10px;
     padding: 10px;
   }

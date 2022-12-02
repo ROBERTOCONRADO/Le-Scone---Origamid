@@ -175,20 +175,20 @@ table {
 }
 
 .container {
-  max-width: 1200;
+  max-width: 1200px;
   margin: 0px auto;
   position: relative;
 }
 
 @media screen and (min-width: 760px) and (max-width: 1199px) {
   .container {
-    max-width: 760;
+    max-width: 760px;
   }
 }
 
 @media screen and (max-width: 759px) {
   .container {
-    max-width: 480;
+    max-width: 480px;
     padding: 10px;
     padding: 10px;
   }
@@ -321,7 +321,8 @@ p {
   .intro-telefone::after {
     margin-top: 80px;
     font-size: 160px;
-    letter-spacing: -70px;
+    letter-spacing: -80px;
+    margin-left: 230px;
   }
 }
 
@@ -342,6 +343,7 @@ p {
 
 .intro-foto {
   border: 10px solid #cbc6b9;
+  width: 100%;
 }
 
 .menu {
@@ -386,6 +388,8 @@ p {
 
 @media screen and (max-width: 759px) {
   .menu-item li span {
+    font-family: "Nunito Sans", sans-serif;
+    line-height: 2.1875em;
     margin-left: 0px;
     width: auto;
   }
@@ -401,23 +405,15 @@ p {
 
 @media screen and (min-width: 1200px) {
   .menu-item img {
-    right: 150px;
-  }
-}
-
-@media screen and (min-width: 760px) and (max-width: 1199px) {
-  .menu-item img {
-    width: 200px;
-    right: 50px;
-    margin-top: 20px;
+    right: 120px;
   }
 }
 
 @media screen and (max-width: 759px) {
   .menu-item img {
-    width: 140px;
-    right: 10px;
-    margin-top: 60px;
+    width: 110px;
+    margin-top: 10px;
+    border: 5px solid #cbc6b9;
   }
 }
 

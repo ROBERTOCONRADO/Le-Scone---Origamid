@@ -26,6 +26,10 @@ $fonte-2: 'Cabin', sans-serif;
     font-size: em(18);
     line-height: em(30, 18);
   }
+  @else if $size == 16 {
+    font-size: em(16);
+    line-height: em(30, 16);
+  }
   @else if $size == 24 {
     font-size: em(24);
     line-height: em(30, 24);

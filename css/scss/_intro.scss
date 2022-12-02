@@ -35,7 +35,8 @@
     @include d(m) {
       margin-top: 80px;
       font-size: 160px;
-      letter-spacing: -70px; 
+      letter-spacing: -80px; 
+      margin-left: 230px;
     }
     @include d(s) {
       display: none;
@@ -54,5 +55,6 @@
 
 .intro-foto {
   border: 10px solid $bege-medio;
+  width: 100%;
 }
 
