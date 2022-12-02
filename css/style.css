@@ -485,3 +485,59 @@ input.button:hover {
   box-shadow: none;
   transition: 0.3s ease-in-out;
 }
+
+.contato-info {
+  color: #988c77;
+  display: inline-block;
+  margin-top: 2em;
+  margin-bottom: 3em;
+}
+
+@media screen and (min-width: 1200px) {
+  .contato-info {
+    float: right;
+    text-align: right;
+    margin-top: -3em;
+  }
+}
+
+.contato-mapa {
+  display: block;
+  -webkit-box-shadow: 0 0 0 10px #cbc6b9;
+  -moz-box-shadow: 0 0 0 10px #cbc6b9;
+  box-shadow: 0 0 0 10px #cbc6b9;
+  clear: both;
+}
+
+.contato-mapa img {
+  width: 100%;
+}
+
+footer {
+  padding: 20px 0;
+  background: #2a2426;
+  -webkit-box-shadow: 0 0 0 10px #2a2426;
+  -moz-box-shadow: 0 0 0 10px #2a2426;
+  box-shadow: 0 0 0 10px #2a2426;
+}
+
+footer p {
+  color: #edece4;
+}
+
+@media screen and (max-width: 759px) {
+  footer p {
+    text-align: center;
+  }
+}
+
+footer a img {
+  float: right;
+}
+
+@media screen and (max-width: 759px) {
+  footer a img {
+    float: none;
+    margin: 20px auto;
+  }
+}

@@ -48,6 +48,26 @@ input.button {
 		margin-top: 5px;
 		box-shadow: none;
 		transition: 0.3s ease-in-out;
+	}							
+}
+
+.contato-info {
+	color: $bege-escuro;
+	display: inline-block;
+	margin-top: 2em;
+	margin-bottom: 3em;
+	@include d(l) {
+		float: right;
+		text-align: right;
+		margin-top: -3em;
 	}
-									
+}
+
+.contato-mapa {
+	display: block;
+	@include box-shadow(0 0 0 10px $bege-medio);
+	clear: both;
+	img {
+		width: 100%;
+	};
 }
